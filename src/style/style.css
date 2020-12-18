@@ -1,0 +1,36 @@
+h2 {
+    font-size: 50pt;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#books-container {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book {
+    display: block;
+    border-radius: 40px;
+    border: 5px solid #3E3E3E;
+    padding: 20px;
+}
+
+.book .new {
+    display: block;
+    border-radius: 40px;
+    background-color: lightgreen;
+    padding: 20px;
+}
