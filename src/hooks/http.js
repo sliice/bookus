@@ -1,3 +1,6 @@
+import { useCallback } from 'react'
+import { proxy } from '../config/config.json'
+
 export const useHttp = () => {
     const request = useCallback(async(url, method = 'GET', body = null, headers = {}) => {
         try {
@@ -5,7 +8,7 @@ export const useHttp = () => {
                 body = JSON.stringify(body)
                 headers['Content-Type'] = 'application/json'
             }
-            const response = await fetch(url, { method, body, headers })
+            const response = await fetch(proxy + url, { method, body, headers })
             const data = await response.json()
 
             return data
@@ -13,7 +16,7 @@ export const useHttp = () => {
             console.debug(e)
             throw e
         }
-    })
+    }, [])
 
     return { request }
 }

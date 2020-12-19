@@ -17,22 +17,32 @@ h2 {
 
 #books-container {
     display: flex;
-    width: 50%;
+    width: 60%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .book {
     display: block;
-    border-radius: 40px;
-    min-width: 150px;
-    max-width: 200px;
-    min-height: 100px;
+    border-radius: 10px;    
     border: 4px solid #3E3E3E;
     padding: 15px 25px;
-    margin: 0 0 20px 0;
+    margin: 0 10px 20px 0;    
+}
+
+.book, .new-book {    
+    width: 200px;
+    min-height: 100px;
+    margin: 0 10px 20px 0; 
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;    
+}
+
+.book:hover,.new-book:hover {
+    transform: scale(1.05);
 }
 
 .book__name {
@@ -44,3 +54,15 @@ h2 {
     font-size: 12pt;
     font-weight: 200;
 }
+
+.new-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #3E3E3E;
+    color: white;
+    font-size: 12pt;
+    font-weight: 800;
+}
+
